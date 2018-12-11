@@ -2,6 +2,9 @@ import { createConnection } from 'typeorm'
 import { DefaultNamingStrategy } from 'typeorm/naming-strategy/DefaultNamingStrategy'
 import { NamingStrategyInterface } from 'typeorm/naming-strategy/NamingStrategyInterface'
 import { snakeCase } from 'typeorm/util/StringUtils'
+import Recipe, { RecipeIngredient, RecipeAppliance } from './recipes/entity'
+import Ingredient from './ingredients/entity'
+
 
 class CustomNamingStrategy extends DefaultNamingStrategy implements NamingStrategyInterface {
 
@@ -29,7 +32,12 @@ export default () => createConnection({
   username: "root",
   password: "secret",
   database: "mysql",
-  entities: [],
+  entities: [
+    Recipe, 
+    Ingredient,
+    RecipeIngredient,
+    RecipeAppliance
+  ],
   synchronize: true,
   logging: true,
   namingStrategy: new CustomNamingStrategy()
