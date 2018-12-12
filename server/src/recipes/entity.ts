@@ -1,7 +1,7 @@
 import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, OneToMany, Index, ManyToOne} from 'typeorm'
-import { IsString} from '../../node_modules/class-validator';
+import { IsString, IsNumber} from '../../node_modules/class-validator';
 import Ingredient from '../ingredients/entity'
-import Appliance from '../appliances/entity'
+import Kitchenware from '../kitchenware/entity'
 
 @Entity()
 export default class Recipe extends BaseEntity {
@@ -13,6 +13,14 @@ export default class Recipe extends BaseEntity {
   @Column('text')
   name: string
 
+  @IsNumber()
+  @Column('int')
+  servings: number
+
+  @IsString()
+  @Column('text', {nullable: true})
+  time: string
+
   @Column('simple-array')
   instructions: string[]
 
@@ -22,6 +30,9 @@ export default class Recipe extends BaseEntity {
 
   @OneToMany(_ => RecipeIngredient, recipeIngredient => recipeIngredient.recipe, {eager: true})
   recipeIngredient: RecipeIngredient[]
+
+  @OneToMany(_ => RecipeKitchenware, recipeKitchenware=> recipeKitchenware.recipe, {eager: true})
+  recipeKitchenware: RecipeKitchenware[]
 
 }
 
@@ -37,11 +48,15 @@ export class RecipeIngredient extends BaseEntity {
 
   @ManyToOne(_ => Ingredient, ingredient => ingredient.recipeIngredient, {eager: true})
   ingredient: Ingredient
+
+  @Column('text', {nullable: true})
+  amount: string
+
 }
 
 @Entity()
-@Index(['recipe', 'appliance'], {unique:true})
-export class RecipeAppliance extends BaseEntity {
+@Index(['recipe', 'kitchenware'], {unique:true})
+export class RecipeKitchenware extends BaseEntity {
 
   @PrimaryGeneratedColumn()
   id?: number
@@ -49,6 +64,6 @@ export class RecipeAppliance extends BaseEntity {
   @ManyToOne(_ => Recipe, recipe => recipe.recipeIngredient)
   recipe: Recipe
 
-  @ManyToOne(_ => Ingredient, ingredient => ingredient.recipeIngredient, {eager: true})
-  appliance: Appliance
+  @ManyToOne(_ => Kitchenware, kitchenware => kitchenware.recipeKitchenware, {eager: true})
+  kitchenware: Kitchenware
 }

@@ -1,0 +1,132 @@
+INSERT INTO mysql.recipes (id, name, servings, time, instructions, image_url) VALUES
+ (1, 'Cheese omlette', 1, '10 min', '["Crack the eggs into a mixing bowl, season with a pinch of sea salt and black pepper, then beat well with a fork until fully combined.", 
+    "Place a small non-stick frying pan on a low heat to warm up.", 
+    "Grate the cheese onto a board and set aside.", "Add ½ tablespoon of oil to the hot pan, then carefully pour in the eggs.", 
+    "Tilt the pan to spread them out evenly, using a fork to swirl the eggs around the pan a little.", 
+    "When the omelette begins to cook and firm up, but still has a little raw egg on top, sprinkle over the cheese.",
+    "Using a spatula, ease around the edges of the omelette, then fold it over in half.", 
+    "When it starts to turn golden brown underneath, remove the pan from the heat and slide the omelette onto a plate. Delicious with a tomato salad and wholemeal bread."]', 
+    'https://img.jamieoliver.com/jamieoliver/recipe-database/xtra_med/0siQaM1MqTv8KwCQYOv41F.jpg?tr=w-430'),
+  (2, 'Asian vegetable broth', 2, '45 min', '["Peel and crush the garlic, then peel and roughly chop the ginger. Trim the greens, finely shredding the cabbage, if using. Trim and finely slice the spring onions and chilli. Pick the herbs.",
+	  "Bash the lemongrass on a chopping board with a rolling pin until it breaks open, then add to a large saucepan along with the garlic, ginger and star anise.",
+	  "Place the pan over a high heat, then pour in the vegetable stock. Bring it just to the boil, then turn down very low and gently simmer for 30 minutes.",
+    "A couple of minutes before it’s cooked, throw in your Asian veggies and gently cook until they are wilted but still crunchy.",
+    "Serve the broth in deep bowls seasoned with soy sauce, sprinkle with the herbs, cress, spring onion and chilli, then serve with wedges of lime."]', 
+    'https://img.jamieoliver.com/jamieoliver/recipe-database/xtra_med/46262269.jpg?tr=w-430'),
+  (3, 'Patsy''s Garlic &Chili Prawns', 2, '10 min', '["Peel the prawns, removing the heads and leaving the tails on. Run the tip of a knife down the backs of the peeled prawns and pull out and discard the dark vein.",
+    "Peel the garlic and finely chop with the chilli (deseed if you like). Pick and finely chop the parsley leaves.", 
+    "Drizzle the oil into a shallow heatproof terracotta dish or a small frying pan over a medium-high heat, add the garlic and chilli and fry for 30 seconds to flavour the oil, before stirring in the paprika.",
+    "Add the prawns and fry for 2 minutes on each side, or until cooked through, adding most of the parsley when you turn the prawns.",
+    "Squeeze half the lemon juice into the dish, then remove from the heat and sprinkle over the remaining parsley and a pinch of sea salt.",
+    "Serve sizzling with warm crusty bread, the remaining lemon cut wedges for squeezing over, and a glass of good Spanish wine."]', 
+    'https://img.jamieoliver.com/jamieoliver/recipe-database/xtra_med/59888883.jpg?tr=w-430'),
+  (4, 'Perfect roast chicken', 4, '1h 20 min', '["Preheat the oven and a roasting tray to 220ºC/425ºF/gas 7.",
+    "Pick and finely chop the soft herbs, halve the lemon and tear the bay leaves.",
+    "Rub inside the chicken cavity with sea salt, then carefully grab the skin at the tip of the chicken breasts, making sure that it does not rip, and pull up gently. 
+      With your other hand gently separate the skin from the meat of the breast – it is normally connected by a little bit of tissuey-type stuff, and you can either leave 
+      this attached in the middle and make two little tunnels either side or you can try to cut away the middle.",
+    "Sprinkle a little salt down the gaps that you have made, push in most of the chopped herbs and drizzle in a little oil.",
+    "Push the lemon halves into the cavity along with the bay and rosemary sprigs, then pull the skin of the chicken breast forward so that none of the flesh is exposed, tuck the little winglets under, and tie up as firmly as possible.",
+    "Rub a little oil all over the chicken skin, scatter over the remaining chopped herbs and season very generously with salt and black pepper. Slash each thigh about 3 or 4 times to allow the heat to penetrate directly.",
+    "Remove the hot tray from the oven and drizzle with a little oil. Put the chicken into the tray, breast-side down and leaning to one side, then place in the oven. Roast for 5 minutes, then lean it to the other side, still breast-side down. 
+      Cook for another 5 minutes, then place the chicken on its bottom and cook for 1 further hour, or until golden and cooked through – the skin should be really crispy and the herbs will flavour the meat– this really must be the best roast chicken."]', 
+    'https://img.jamieoliver.com/jamieoliver/recipe-database/xtra_med/70966262.jpg?tr=w-430'),
+  (5, 'Wicked Champagne cocktail', 4, '10 min', '["First of all, cut your pomegranates in half and take their seeds out. The easy way to do this is to hold one half of a pomegranate cut-side down in your hand and bash the top of it with a spatula so the seeds come tumbling out – make sure you’ve got a bowl underneath to catch them all!",
+    "Whiz the seeds for 5 to 10 seconds in a food processor, pour through a sieve and you’ll have some lovely pomegranate juice. If the pomegranates are particularly sharp, feel free to stir in a little sugar to sweeten, although I usually don’t.",
+    "All you need to do is put about 5cm of pomegranate juice into a Champagne flute, then top it up with your Champagne."]', 
+    'https://img.jamieoliver.com/jamieoliver/recipe-database/oldImages/xtra_med/652_1_1438244955.jpg?tr=w-430');
+
+
+
+INSERT INTO mysql.ingredients (id, name) VALUES
+(1, 'large free-range eggs'),
+(2, 'olive oil'),
+(3, 'Cheddar cheese'),
+(4, 'garlic'),
+(5, 'ginger'),
+(6, 'mixed Asian greens'),
+(7, 'spring onions'),
+(8, 'fresh red chilli'),
+(9, 'Thai basil'),
+(10, 'lemongrass'),
+(11, 'star anise'),
+(12, 'organic vegetable stock'),
+(13, 'soy sauce'),
+(14, 'shiso cress'),
+(15, 'lime'),
+(16, 'large raw shell-on king prawns'),
+(17, 'flat-leaf parsley'),
+(18, 'smoked paprika'),
+(19, 'lemon'),
+(20, 'fresh soft herbs , such as basil, flat-leaf parsley, marjoram'),
+(21, 'fresh bay leaves'),
+(22, 'whole free-range chicken'),
+(23, 'fresh rosemary'),
+(24, 'pomegranates'),
+(25, 'caster sugar'),
+(26, 'Champagne');
+
+
+
+INSERT INTO mysql.recipe_ingredients (recipe_id, ingredient_id, amount) VALUES
+(1,1,'2'),
+(1, 2, null),
+(1, 3, '10g'),
+(2, 4, '3 cloves'),
+(2, 5, '5cm piece'),
+(2, 6,  '200g'),
+(2, 7,  '2'),
+(2, 8, '1'),
+(2, 9, '5 sprigs'),
+(2, 10, '1 stick'),
+(2, 11, '2'),
+(2, 12, '800 ml'),
+(2, 13, '1 teaspoon'),
+(2, 14, '1 small punnet'),
+(2, 15, '1'),
+(3, 16, '8'),
+(3, 4, '3 cloves'),
+(3, 8 , '1'),
+(3, 17, 'a few sprigs'),
+(3, 2, '50 ml'),
+(3, 18, 'half a teaspoon'),
+(3, 19, '1'),
+(4, 20 , '60g'),
+(4, 19 , '1'),
+(4, 21 , '4'),
+(4, 2, null),
+(4, 23, '2 sprigs'),
+(5, 24 , '3-4'),
+(5, 25, null),
+(5, 26 , '1 bottle');
+
+
+INSERT INTO mysql.kitchenwares (id, name) VALUES
+(1,'Mixing bowl'),
+(2, 'Frying pan'),
+(3, 'Grate'),
+(4,'Chopping board'),
+(5, 'Rolling pin'),
+(6, 'Sauce pan'),
+(7,'Oven'),
+(8,'Roasting tray'),
+(9,'Food processor'),
+(10, 'Sieve');
+
+
+INSERT INTO mysql.recipe_kitchenwares (recipe_id, kitchenware_id) VALUES
+(1,1),
+(1, 2),
+(1, 3),
+(2, 4),
+(2, 5),
+(2, 6),
+(3, 4),
+(3, 2),
+(4, 4),
+(4, 7),
+(4, 8),
+(5, 9),
+(5, 10);
+
+

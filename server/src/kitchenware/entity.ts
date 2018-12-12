@@ -1,9 +1,9 @@
 import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, OneToMany} from 'typeorm'
 import { IsString} from '../../node_modules/class-validator';
-import {RecipeAppliance} from '../recipes/entity'
+import {RecipeKitchenware} from '../recipes/entity'
 
 @Entity()
-export default class Applicance extends BaseEntity {
+export default class Kitchenware extends BaseEntity {
 
   @PrimaryGeneratedColumn()
   id?: number
@@ -12,8 +12,8 @@ export default class Applicance extends BaseEntity {
   @Column('text')
   name: string
 
-  @OneToMany(_ => RecipeAppliance, recipeAppliance => recipeAppliance.appliance)
-  recipeAppliance: RecipeAppliance[]
+  @OneToMany(_ => RecipeKitchenware, recipeKitchenware => recipeKitchenware.kitchenware)
+  recipeKitchenware: RecipeKitchenware[]
 
 }
 
