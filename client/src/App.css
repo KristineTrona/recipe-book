@@ -1,0 +1,19 @@
+
+
+.recipes-container-wrapper{
+  min-height: 85vh;
+}
+
+/* Navbar */
+
+.navbar-wrapper{
+  margin-bottom: 130px;
+}
+
+.logo{
+  max-height: 100px;
+}
+
+.modal-bottom-text{
+  font-size: 12px;
+}

@@ -1,5 +1,8 @@
-import {createKoaServer} from "routing-controllers"
+import {createKoaServer, Action, BadRequestError} from "routing-controllers"
 import setupDb from './db'
+import UserController from "./users/controller";
+import LoginController from "./logins/controller";
+import { verify } from "./jwt";
 
 
 const port = process.env.PORT || 4000
@@ -7,7 +10,24 @@ const port = process.env.PORT || 4000
 const app = createKoaServer({
   cors: true,
   controllers: [
-   ]
+    UserController,
+    LoginController
+   ],
+   authorizationChecker: (action: Action) => {
+    const header: string = action.request.headers.authorization
+
+    if(header && header.startsWith('Bearer ')){
+      const [ , token ] = header.split(' ')
+      
+      try {
+       return !!(token && verify(token))
+     }
+     catch (err) {
+       throw new BadRequestError(err)
+     }
+    }
+      return false
+  }
 })
 
 setupDb()
