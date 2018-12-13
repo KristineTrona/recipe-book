@@ -5,6 +5,7 @@ import { snakeCase } from 'typeorm/util/StringUtils'
 import Recipe, { RecipeIngredient, RecipeKitchenware} from './recipes/entity'
 import Ingredient from './ingredients/entity'
 import Kitchenware from './kitchenware/entity'
+import Users from './users/entity'
 
 
 class CustomNamingStrategy extends DefaultNamingStrategy implements NamingStrategyInterface {
@@ -38,7 +39,8 @@ export default () => createConnection({
     Ingredient,
     Kitchenware,
     RecipeIngredient,
-    RecipeKitchenware
+    RecipeKitchenware,
+    Users
   ],
   synchronize: true,
   logging: true,
