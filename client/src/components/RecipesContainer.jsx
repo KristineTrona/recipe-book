@@ -1,8 +1,13 @@
 import React, {PureComponent} from 'react'
 import {connect} from 'react-redux'
+import {getRecipes} from '../actions/recipes'
 
 
 class RecipesContainer extends PureComponent {
+
+	componentDidMount = () => {
+		this.props.getRecipes()
+	}
 	
 	render() {
 		return (
@@ -14,11 +19,12 @@ class RecipesContainer extends PureComponent {
 
 const mapStateToProps = function (state) {
 	return {
-
+		recipes: state.recipes
 	}
 }
 
 const mapDispatchToProps = {
-	}
+	getRecipes
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(RecipesContainer)

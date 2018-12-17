@@ -2,7 +2,6 @@ import React, {PureComponent} from 'react'
 import {connect} from 'react-redux'
 import {signup} from '../actions/users'
 import $ from 'jquery'
-// import {Redirect} from 'react-router-dom'
 
 class SignupForm extends PureComponent {
   state = {}

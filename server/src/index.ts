@@ -1,8 +1,9 @@
 import {createKoaServer, Action, BadRequestError} from "routing-controllers"
 import setupDb from './db'
+import { verify } from "./jwt";
 import UserController from "./users/controller";
 import LoginController from "./logins/controller";
-import { verify } from "./jwt";
+import RecipesController from "./recipes/controller";
 
 
 const port = process.env.PORT || 4000
@@ -11,7 +12,8 @@ const app = createKoaServer({
   cors: true,
   controllers: [
     UserController,
-    LoginController
+    LoginController,
+    RecipesController
    ],
    authorizationChecker: (action: Action) => {
     const header: string = action.request.headers.authorization

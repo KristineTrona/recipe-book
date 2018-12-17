@@ -10,7 +10,8 @@ class LoginForm extends PureComponent {
 		event.preventDefault()
     this.props.login(this.state.email, this.state.password)
 
-    $('#loginModal').modal('toggle')
+		$('#loginModal').modal('toggle')
+	
 	}
 
 	handleChange = (event) => {
@@ -19,7 +20,8 @@ class LoginForm extends PureComponent {
     this.setState({
       [name]: value
     })
-  }
+	}
+
 
 	render() {
 		return (
@@ -45,13 +47,6 @@ class LoginForm extends PureComponent {
 			        			this.state.password || ''
 			        		} onChange={ this.handleChange } />
 			        	</div>
-                {
-                  this.props.login.error &&
-                  <div>
-                    {this.props.login.error}
-                  </div>
-                }
-                
 			        	<button className="btn btn-primary btn-block mt-4" type="submit">Login</button>
 			        </form>
             </div>
@@ -70,7 +65,7 @@ class LoginForm extends PureComponent {
 const mapStateToProps = function (state) {
 	return {
 		currentUser: state.currentUser,
-    error: state.login.error
+    login: state.login
 	}
 }
 
