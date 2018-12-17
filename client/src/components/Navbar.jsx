@@ -23,7 +23,7 @@ class Navbar extends Component{
   render(){
     return(
       <div className="navbar-wrapper">
-        <nav className="navbar navbar-expand-md bg-dark navbar-dark fixed-top p-3" >   
+        <nav className="navbar navbar-expand-md navbar-dark fixed-top p-3" >   
           <img className= "img-fluid logo" src={logo} alt="cupcake logo"/>
           <Link to="/recipes">   
             <p className="navbar-brand ml-2 my-auto">My Recipes</p>
@@ -34,7 +34,7 @@ class Navbar extends Component{
           <div className="collapse navbar-collapse" id="navbarNav">
             { !this.props.user &&
               <ul className="navbar-nav ml-auto mr-5">
-                <li className="nav-item mr-3">
+                <li className="nav-item mr-3 my-3 my-md-0">
                   <button className="btn btn-danger" 
                     data-toggle="modal" data-target="#loginModal">
                     Login
@@ -64,7 +64,6 @@ class Navbar extends Component{
         <LoginForm/>
 
         <SignupForm/>
-
       </div>
     )
   }

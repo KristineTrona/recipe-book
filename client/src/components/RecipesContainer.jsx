@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react'
 import {connect} from 'react-redux'
 import {getRecipes} from '../actions/recipes'
+import Recipes from './Recipes'
 
 
 class RecipesContainer extends PureComponent {
@@ -12,7 +13,7 @@ class RecipesContainer extends PureComponent {
 	render() {
 		return (
 			<div className="recipes-container-wrapper">
-        Test
+        <Recipes recipes={this.props.recipes}/>
       </div>
 		)}
 }
